@@ -1,0 +1,14 @@
+extends auth-layout
+
+block contents
+  div.flex.flex-col.justify-center
+    if isPasswordVerified 
+      button 
+        a(href="/auth/factor-challenge") 
+          div.px-2.py-1.border-2.border-indigo-700.rounded-md.bg-indigo-700.text-white(class="hover:bg-indigo-300 hover:text-gray-800 cursor-pointer") Send Push to Okta Verify
+    else
+      p Your ID and Password is not valid
+      button 
+        a(href="/auth/login") 
+          div.px-2.py-1.mt-10.border-2.border-indigo-700.rounded-md.bg-indigo-700.text-white(class="hover:bg-indigo-300 hover:text-gray-800 cursor-pointer") Go back to login
+          

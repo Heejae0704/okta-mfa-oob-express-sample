@@ -1,0 +1,10 @@
+extends layout.pug
+
+block head 
+  title This is weather page!
+
+block content
+  .flex.items-center.justify-center.mt-12
+    div.text-gray-700.text-2xl.mr-2= location + `'s weather is `
+    div.text-blue-700.text-2xl= weather
+    img(src=icon)

@@ -1,0 +1,16 @@
+extends layout.pug
+
+block head
+  title this is index!
+
+block content
+  h1.text-xl.font-bold.mb-5.mt-10 Express + Pug + Tailwind + Axios
+  p.min-w-60.max-w-xl.mb-3
+    span This app demonstrates the implementation of MFA authentication with Direct Authentication grant type using Okta as Auth server. Refer to 
+    a.underline(href="https://developer.okta.com/docs/guides/configure-direct-auth-grants/aotp/main/" target="_blank") this article
+    span= ` from Okta developer website for detailed explanation of Direct Authentication grant type.`
+  p.min-w-60.max-w-xl.mb-3
+    span Direct authentication grant type is useful when your enduser's browser is not connected to the Internet, but your backend server is.
+  if isOktaAuthenticated
+    p.min-w-60.max-w-xl.mb-3.font-bold.text-lg 
+      span= `You are currently logged in!`

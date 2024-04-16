@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="/styles/styles.css", rel="stylesheet")
+    block head
+  body
+    .flex.justify-center
+      .flex.flex-col.justify-start.items-center.min-h-screen.max-w-7xl
+        h1.text-2xl.mt-10= errorMessage
+        button 
+          a(href="/") 
+            div.px-2.py-1.border-2.border-indigo-700.rounded-md.bg-indigo-700.text-white.mt-10(class="hover:bg-indigo-300 hover:text-gray-800 cursor-pointer") Go back to Homepage
